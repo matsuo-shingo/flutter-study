@@ -10,7 +10,7 @@ class CountUpPage extends StatefulWidget {
 }
 
 class _CountUpPageState extends State<CountUpPage> {
-  int _counter = 99;
+  int _counter = 0;
 
   void _incrementCounter() {
     setState(() {
