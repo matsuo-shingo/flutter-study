@@ -1,3 +1,4 @@
+import 'package:count_up/todo_list_page.dart';
 import 'package:flutter/material.dart';
 
 import 'count_up_page.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CountUpPage(title: 'CountUpPage'),
+      home: const TodoListPage(),
+      // const CountUpPage(title: 'CountUpPage'),
     );
   }
 }
