@@ -64,44 +64,12 @@ class _TodoListState extends State<TodoListPage> {
   }
 
 
-  // void _addTodoItem(String title) {
-  //   if (title.isNotEmpty && !_todoList.contains(title)) {
-  //     setState(() {
-  //       _todoList.add(title);
-  //     });
-  //     _textController.clear();
-  //   }
-  // }
-
-  void _showErrorDialog(String message) {
-    showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('エラー'),
-            content: Text(message),
-            actions: <Widget>[
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('閉じる'),
-              ),
-            ],
-          );
-        });
-  }
-
   void _addTodoItem(String title) {
-    if (title.isNotEmpty) {
-      if (!_todoList.contains(title)) {
-        setState(() {
-          _todoList.add(title);
-        });
-        _textController.clear();
-      } else {
-        _showErrorDialog('タスクが既に存在します。別のタスク名を入力してください。');
-      }
+    if (title.isNotEmpty && !_todoList.contains(title)) {
+      setState(() {
+        _todoList.add(title);
+      });
+      _textController.clear();
     }
   }
 
